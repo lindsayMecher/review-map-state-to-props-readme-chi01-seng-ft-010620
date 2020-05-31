@@ -1,5 +1,10 @@
+// export the reducer on same line it's defined.
+// switch based on action type.
+// always make a copy of the obj. Don't mutate obj.
+// 
+
 export default function shoppingListItemReducer(state = {
-  items: [], 
+  items: ['initial item'], 
   users: [ 'initial user' ]
 }, action) {
 
@@ -19,3 +24,19 @@ export default function shoppingListItemReducer(state = {
       return state;
   }
 };
+
+// Object.assign notes
+
+// const state = {
+//   items: [1,2,3],
+//   users: ["a", "b"]
+// };
+
+// // create a new empty obj that copies the entire obj called "state"
+// // then updates the value of the items key.
+// const newState = Object.assign({}, state, {
+//   items: state.items.concat('num')
+// });
+
+// console.log(newState)
+// console.log(state)
